@@ -1,0 +1,123 @@
+/* General Styles for Forecast Cards */
+.forecast-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping of forecast boxes */
+    overflow-x: auto; /* Allow horizontal scrolling on small screens if necessary */
+  }
+  
+  .forecast-box {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%; /* Make each box take 30% of the container width */
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .forecast-box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-box .date {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .forecast-box .day_temp {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .forecast-box .for {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .forecast-box .for .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .forecast-box .for div p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .forecast-box .for div span {
+    font-size: 14px;
+    color: #ddd;
+  }
+  
+  .forecast-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Mobile and Tablet Styles (up to 768px) */
+  @media (max-width: 768px) {
+    .forecast-container {
+      gap: 10px;
+    }
+  
+    .forecast-box {
+      width: 32%;  /* Slightly increase width to accommodate more cards on tablets */
+      padding: 15px;
+    }
+  
+    .forecast-box .date {
+      font-size: 1rem;
+    }
+  
+    .forecast-box .day_temp {
+      font-size: 1.6rem;
+    }
+  
+    .for p {
+      font-size: 0.8rem;
+    }
+  
+    .for span {
+      font-size: 0.7rem;
+    }
+  }
+  
+  /* Small Screens (Phones, max-width: 480px) */
+  @media (max-width: 480px) {
+    .forecast-container {
+      gap: 10px;
+      /* Allow horizontal scrolling for small screens if forecast boxes don't fit */
+    }
+  
+    .forecast-box {
+      width: 35%;  /* Adjust width to make them fit in a single row on smaller screens */
+      padding: 10px;
+    }
+  
+    .forecast-box .date {
+      font-size: 0.9rem;
+    }
+  
+    .forecast-box .day_temp {
+      font-size: 1.4rem;
+    }
+  
+    .for p {
+      font-size: 0.7rem;
+    }
+  
+    .for span {
+      font-size: 0.6rem;
+    }
+  }
+  

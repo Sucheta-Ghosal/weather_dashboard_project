@@ -1,0 +1,121 @@
+/* Basic Styles for Navbar */
+.navbar {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #0d0653;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Menu button for mobile view */
+.toggler-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggler-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Mobile Navigation options */
+.options {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: #0d0653;
+  flex-direction: row;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.options.show {
+  display: flex; /* Show options when 'show' class is added */
+  z-index: 10000;
+}
+
+.nav-button {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-button:hover {
+  background-color: #16a085;
+  color: white;
+}
+
+.dropdown {
+  background-color: #34495e;
+  padding: 10px;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown li {
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.dropdown li:hover {
+  background-color: #16a085;
+  cursor: pointer;
+}
+
+.dropdown li:not(:last-child) {
+  border-bottom: 1px solid #2c3e50;
+}
+
+/* Desktop Navigation (when screen is larger than 768px) */
+@media (min-width: 768px) {
+  .options {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    position: static;
+    width: auto;
+  }
+
+  .toggler-btn {
+    display: none; /* Hide the hamburger menu button on larger screens */
+  }
+
+  .nav-button {
+    width: auto; 
+  }
+
+  .dropdown {
+    position: relative;
+    width: auto;
+  }
+}
